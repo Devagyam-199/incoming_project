@@ -13,6 +13,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+import userValidate from "./Routes/userValidation.routes.js";
+app.use("/api/v1",userValidate)
+
 app.use(globalErrorHandler);
 
 export default app;

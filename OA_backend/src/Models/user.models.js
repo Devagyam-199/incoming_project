@@ -18,6 +18,7 @@ const userSchema = new mongoose.Schema(
     passHash: {
       type: String,
       required: true,
+      select:false,
     },
     testTaken: {
       type: [
